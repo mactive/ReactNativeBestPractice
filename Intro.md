@@ -27,4 +27,4 @@ RN从出生到现在已经4年多了. 一直没有发布1.0正式版本, 笔者�
 
 ### 未来瞎猜
 
-总体上感觉FB自己有点跟不上节奏. 而且初期0.50之前, 在Android上吃了不少亏. 不过从去年年中开始许下了[宏图大志](https://www.youtube.com/watch?v=UcqRXTriUVI&t), 1. 要废掉Bridge体系, 换成JSI(JavaScript Interface) 2. 重新涉及ReactNativeModules. 这些应该也都是社区的呼声. FB也请来了C++大牛[来提高性能](https://infinite.red/ChainReactConf/speaker-list/marc-horowitz), 无奈国外没有996, 进度不让人满意, 面对Flutter的正面冲突稍显乏力. 好在React程序员人多势众, 根基扎实. 动态化领域会有一场好戏.
+总体上感觉FB自己有点跟不上节奏. 而且初期0.50之前, 在Android上吃了不少亏. 不过今年年初许下了[宏图大志](https://www.youtube.com/watch?v=UcqRXTriUVI&t), 1. 要废掉Bridge体系, 换成JSI(JavaScript Interface) 2. NativeModules换成TurboModules. 这些应该也都是社区的呼声. FB也请来了C++大牛[来提高性能](https://infinite.red/ChainReactConf/speaker-list/marc-horowitz), 无奈国外没有996, 进度不让人满意, 面对Flutter的正面冲突稍显乏力. 好在React程序员人多势众, 根基扎实. 预感动态化领域会有一场好戏.
