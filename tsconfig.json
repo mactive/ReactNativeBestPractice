@@ -1,10 +1,22 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "lib": ["dom", "esnext"],
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
     "jsx": "react-native",
+    "module": "es2015",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
-  }
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": ["node_modules"]
 }

@@ -1,4 +1,4 @@
 {
-  "react-native-tools.logLevel": "Debug",
+  "react-native-tools.logLevel": "Trace",
   "react-native.packager.port": 19001
 }

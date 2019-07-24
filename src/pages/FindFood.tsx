@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { Tip } from 'beeshell';
 
-export default class FindFood extends Component {
+export class FindFoodScreen extends Component {
     onFindPress = () => {
         console.log('onFindPress');
         Tip.show('正在为您寻找...', 2000, false, 'center')
