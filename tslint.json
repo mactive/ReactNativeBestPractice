@@ -28,7 +28,8 @@
       "jsx-no-multiline-js": false,
       "jsx-wrap-multiline": false,
       "object-literal-sort-keys": false,
-      "member-access": false
+      "member-access": false,
+      "no-submodule-imports": false
     }
   }
   

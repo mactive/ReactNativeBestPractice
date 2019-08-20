@@ -28,7 +28,7 @@ export class CardScreen extends Component<Props> {
             <Container>
                 <Card
                     title="Price Tag"
-                    image={require("../assets/background5.jpg")}
+                    image={require("../../assets/background5.jpg")}
                     author="Liu Yi"
                     text="Thanks to Design+Code, I improved my design skill and learned to do animations for my app Price Tag, a top news app in China."
                 />

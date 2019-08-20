@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { ImageSourcePropType } from 'react-native';
 import styled from "styled-components/native";
 
 interface CardProps {
-    image: string
+    image: ImageSourcePropType
     title: string
     author: string
     text: string
@@ -18,7 +18,7 @@ export default class Card extends Component<CardProps> {
           <Title>{this.props.title}</Title>
           <Author>by {this.props.author}</Author>
         </Cover>
-        <Text>{this.props.text}</Text>
+        <Detail>{this.props.text}</Detail>
       </Container>
     );
   }
@@ -64,7 +64,7 @@ const Author = styled.Text`
   text-transform: uppercase;
 `;
 
-const Text = styled.Text`
+const Detail = styled.Text`
   font-size: 17px;
   margin: 20px;
   line-height: 24px;
