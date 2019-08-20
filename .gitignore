@@ -10,3 +10,4 @@ web-build/
 web-report/
 yarn-error.log
 .vscode/.react
+.DS_Store

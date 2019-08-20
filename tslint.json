@@ -27,7 +27,8 @@
       "jsx-no-lambda": false,
       "jsx-no-multiline-js": false,
       "jsx-wrap-multiline": false,
-      "object-literal-sort-keys": false
+      "object-literal-sort-keys": false,
+      "member-access": false
     }
   }
   

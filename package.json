@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.3",
+    "@types/styled-components": "^4.1.18",
     "beeshell": "^2.0.11",
     "expo": "^33.0.0",
     "react": "16.8.3",
