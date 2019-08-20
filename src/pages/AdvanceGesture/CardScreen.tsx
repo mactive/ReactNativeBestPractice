@@ -9,6 +9,9 @@ interface State {
     pan: Animated.ValueXY
     scale: Animated.Value
     translateY: Animated.Value
+    thirdScale: Animated.Value
+    thirdTranslateY: Animated.Value
+    index: number
 }
 export class CardScreen extends Component<Props, State> {
 
@@ -19,18 +22,26 @@ export class CardScreen extends Component<Props, State> {
     } 
 
     state = {
+        // original
         pan: new Animated.ValueXY(),
+        // second
         scale: new Animated.Value(0.9),
         translateY: new Animated.Value(44),
+        // third
+        thirdScale: new Animated.Value(0.8),
+        thirdTranslateY: new Animated.Value(-50),
+        index: 0
     }
 
     componentWillMount() {
         this.panResponder = PanResponder.create({
-            onMoveShouldSetPanResponder: () => true,
             onPanResponderGrant: () => {
                 Animated.spring(this.state.scale, { toValue: 1 }).start();
                 Animated.spring(this.state.translateY, { toValue: 0}).start();
+                Animated.spring(this.state.thirdScale, { toValue: 0.9 }).start();
+                Animated.spring(this.state.thirdTranslateY, { toValue: 44 }).start();
             },
+            onMoveShouldSetPanResponder: () => true,
             onPanResponderMove: Animated.event([
                 null,
                 { dx: this.state.pan.x, dy: this.state.pan.y }
@@ -41,15 +52,33 @@ export class CardScreen extends Component<Props, State> {
                 if (positionY > 200) {
                     Animated.timing(this.state.pan, {
                         toValue: {x: 0, y: 1000}
-                    }).start()
+                    }).start(() => {
+                        this.state.pan.setValue({x: 0, y: 0});
+                        this.state.scale.setValue(0.9);
+                        this.state.translateY.setValue(44);
+                        this.state.thirdScale.setValue(0.8);
+                        this.state.thirdTranslateY.setValue(-50);
+                        this.setState({index: this.getNextIndex(this.state.index)});
+                    });
                 } else {
                     Animated.spring(this.state.pan, { toValue: { x: 0, y: 0} }).start();
                     Animated.spring(this.state.scale, { toValue: 0.9 }).start()
                     Animated.spring(this.state.translateY, { toValue: 44 }).start()
+                    Animated.spring(this.state.thirdScale, { toValue: 0.8 }).start();
+                    Animated.spring(this.state.thirdTranslateY, { toValue: -50 }).start();
                 }
                 
             },
         })
+    }
+
+    private getNextIndex = (index: number) => {
+        const nextIndex = index + 1;
+        if (nextIndex > cards.length - 1) {
+            return 0
+        } else {
+            return nextIndex
+        }
     }
 
     public render() {
@@ -65,10 +94,10 @@ export class CardScreen extends Component<Props, State> {
                     {...this.panResponder.panHandlers}
                 >
                 <Card
-                    title={cards[0].title}
-                    image={cards[0].image}
-                    author={cards[0].author}
-                    text={cards[0].text}
+                    title={cards[this.state.index].title}
+                    image={cards[this.state.index].image}
+                    author={cards[this.state.index].author}
+                    text={cards[this.state.index].text}
                 />
                 </Animated.View>
                 <Animated.View
@@ -86,13 +115,35 @@ export class CardScreen extends Component<Props, State> {
                             { translateY: this.state.translateY },
                         ]
                     }}
-                    {...this.panResponder.panHandlers}
                 >
                 <Card
-                    title={cards[1].title}
-                    image={cards[1].image}
-                    author={cards[1].author}
-                    text={cards[1].text}
+                    title={cards[this.getNextIndex(this.state.index)].title}
+                    image={cards[this.getNextIndex(this.state.index)].image}
+                    author={cards[this.getNextIndex(this.state.index)].author}
+                    text={cards[this.getNextIndex(this.state.index)].text}
+                />
+                </Animated.View>
+                <Animated.View
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        zIndex: -2,
+                        width: "100%",
+                        height: "100%",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        transform: [
+                            { scale: this.state.thirdScale },
+                            { translateY: this.state.thirdTranslateY },
+                        ]
+                    }}
+                >
+                <Card
+                    title={cards[this.getNextIndex(this.state.index + 1)].title}
+                    image={cards[this.getNextIndex(this.state.index + 1)].image}
+                    author={cards[this.getNextIndex(this.state.index + 1)].author}
+                    text={cards[this.getNextIndex(this.state.index + 1)].text}
                 />
                 </Animated.View>
             </Container>
