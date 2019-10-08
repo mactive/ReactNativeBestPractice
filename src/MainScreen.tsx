@@ -44,6 +44,7 @@ export class MainScreen extends Component<NavigationScreenProps> {
     private destinationAndTitlePairs: Array<DestinationAndTitle> = [
         new DestinationAndTitle("FindFood"),
         new DestinationAndTitle("TheoryRender"),
+        new DestinationAndTitle("Card"),
     ];
 }
 
