@@ -3,7 +3,7 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 import { MainScreen } from "./MainScreen";
 import { FindFoodScreen } from "./pages/FindFood/ShakeRotate";
 import { TheoryRenderScreen } from "./pages/RNTheory/TheoryRenderScreen";
-import { CardScreen } from "./pages/AdvanceGesture/CardScreen.tsx";
+import { CardScreen } from "./pages/AdvanceGesture/CardScreen";
 
 const mainNavigator = createStackNavigator({
 	Main: { screen: MainScreen },
