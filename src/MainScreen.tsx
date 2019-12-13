@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, ScrollView } from 'react-native';
+import { Text, ScrollView, TouchableHighlight, View } from 'react-native';
 import { NavigationScreenProps } from "react-navigation";
 
 export class DestinationAndTitle {
@@ -29,13 +29,27 @@ export class MainScreen extends Component<NavigationScreenProps> {
                 }}
             >
                 {this.destinationAndTitlePairs.map(item => (
-                    <Button 
+                    <TouchableHighlight 
                         key={item.destination}
                         onPress={() => 
                             this.props.navigation.navigate(item.destination)
                         }
-                        title={item.title}
-                    />
+                    >
+                        <View
+                            style ={{
+                                height: 60,
+                                width:160,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                backgroundColor: '#F0F0F0',
+                                borderBottomColor: '#666666',
+                                borderBottomWidth: 1
+                            }}
+                        >
+                            <Text>{item.title}</Text>
+                        </View>
+                        
+                    </TouchableHighlight>
                 ))}
             </ScrollView>
         )
