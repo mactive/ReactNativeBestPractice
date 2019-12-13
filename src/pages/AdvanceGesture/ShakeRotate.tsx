@@ -5,7 +5,7 @@ interface Props {
     animatedValue: Animated.Value
 }
 
-export class FindFoodScreen extends Component<Props, any> {
+export class ShakeRotateScreen extends Component<Props, any> {
 
     public animatedValue: Animated.Value;
     public animatedShake: Animated.Value;
@@ -84,7 +84,7 @@ export class FindFoodScreen extends Component<Props, any> {
                         rotate: this.buttonRotate
                     }],
                 }}>
-                    <Button title="梁架" onPress={() => {
+                    <Button title="梁架(点我)" onPress={() => {
                         this.animate()
                     }} />
                 </Animated.View>

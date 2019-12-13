@@ -42,6 +42,7 @@ export class MainScreen extends Component<NavigationScreenProps> {
     }
 
     private destinationAndTitlePairs: Array<DestinationAndTitle> = [
+        new DestinationAndTitle("ShakeRotateScreen",'抖三抖绕一圈'),
         new DestinationAndTitle("FindFood"),
         new DestinationAndTitle("TheoryRender"),
         new DestinationAndTitle("CardScreen"),
