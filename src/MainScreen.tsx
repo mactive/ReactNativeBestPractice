@@ -15,7 +15,9 @@ export class DestinationAndTitle {
     public title: string;
 }
 
+// tslint:disable-next-line: max-classes-per-file
 export class MainScreen extends Component<NavigationScreenProps> {
+
     public static navigationOptions = {
         title: "Home"
     };
@@ -61,6 +63,7 @@ export class MainScreen extends Component<NavigationScreenProps> {
         new DestinationAndTitle("FindFood"),
         new DestinationAndTitle("TheoryRender"),
         new DestinationAndTitle("CardScreen"),
+        new DestinationAndTitle("Accordion"),
     ];
 }
 

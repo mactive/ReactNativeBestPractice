@@ -6,6 +6,7 @@ import { RepeatAnimationWithMask } from "./pages/AdvanceGesture/RepeatAnimationW
 import { FindFoodScreen } from "./pages/FindFood/FindFood";
 import { TheoryRenderScreen } from "./pages/RNTheory/TheoryRenderScreen";
 import { CardScreen } from "./pages/AdvanceGesture/CardScreen";
+import Accordion from "./pages/Accordion";
 
 const mainNavigator = createStackNavigator({
 	Main: { screen: MainScreen },
@@ -14,6 +15,7 @@ const mainNavigator = createStackNavigator({
 	FindFood: { screen: FindFoodScreen },
 	ShakeRotateScreen: { screen: ShakeRotateScreen },
 	RepeatAnimationWithMask: { screen: RepeatAnimationWithMask },
+	Accordion: {screen: Accordion }
 });
 
 export default createAppContainer(mainNavigator);

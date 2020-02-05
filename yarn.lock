@@ -1034,6 +1034,11 @@ abbrev@1:
   resolved "http://r.npm.sankuai.com/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha1-+PLIh60Qv2f2NPAFtph/7TF5qsg=
 
+abs-svg-path@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npm.taobao.org/abs-svg-path/download/abs-svg-path-0.1.1.tgz#df601c8e8d2ba10d4a76d625e236a9a39c2723bf"
+  integrity sha1-32Acjo0roQ1KdtYl4japo5wnI78=
+
 absolute-path@^0.0.0:
   version "0.0.0"
   resolved "http://r.npm.sankuai.com/absolute-path/download/absolute-path-0.0.0.tgz#a78762fbdadfb5297be99b15d35a785b2f095bf7"
@@ -4145,6 +4150,13 @@ normalize-path@^2.0.1, normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+normalize-svg-path@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/normalize-svg-path/download/normalize-svg-path-1.0.1.tgz#6f729ad6b70bb4ca4eff2fe4b107489efe1d56fe"
+  integrity sha1-b3Ka1rcLtMpO/y/ksQdInv4dVv4=
+  dependencies:
+    svg-arc-to-cubic-bezier "^3.0.0"
+
 npm-bundled@^1.0.1:
   version "1.0.6"
   resolved "http://r.npm.sankuai.com/npm-bundled/download/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
@@ -4390,6 +4402,11 @@ parse-node-version@^1.0.0:
   version "1.0.1"
   resolved "http://r.npm.sankuai.com/parse-node-version/download/parse-node-version-1.0.1.tgz#e2b5dbede00e7fa9bc363607f53327e8b073189b"
   integrity sha1-4rXb7eAOf6m8NjYH9TMn6LBzGJs=
+
+parse-svg-path@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/parse-svg-path/download/parse-svg-path-0.1.2.tgz#7a7ec0d1eb06fa5325c7d3e009b859a09b5d49eb"
+  integrity sha1-en7A0esG+lMlx9PgCbhZoJtdSes=
 
 parseurl@~1.3.3:
   version "1.3.3"
@@ -4702,6 +4719,16 @@ react-native-reanimated@1.0.1:
   version "1.0.1"
   resolved "http://r.npm.sankuai.com/react-native-reanimated/download/react-native-reanimated-1.0.1.tgz#5ecb6a2f6dad0351077ac9b771ca943b7ad6feda"
   integrity sha1-XstqL22tA1EHesm3ccqUO3rW/to=
+
+react-native-redash@^9.6.0:
+  version "9.6.0"
+  resolved "https://registry.npm.taobao.org/react-native-redash/download/react-native-redash-9.6.0.tgz#4fde2075c52b2dd0646436d50a326fd9989f4393"
+  integrity sha1-T94gdcUrLdBkZDbVCjJv2ZifQ5M=
+  dependencies:
+    abs-svg-path "^0.1.1"
+    normalize-svg-path "^1.0.1"
+    parse-svg-path "^0.1.2"
+    use-memo-one "^1.1.1"
 
 react-native-safe-area-view@^0.14.1:
   version "0.14.6"
@@ -5526,6 +5553,11 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-arc-to-cubic-bezier@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/svg-arc-to-cubic-bezier/download/svg-arc-to-cubic-bezier-3.2.0.tgz#390c450035ae1c4a0104d90650304c3bc814abe6"
+  integrity sha1-OQxFADWuHEoBBNkGUDBMO8gUq+Y=
+
 symbol-observable@^1.0.4:
   version "1.2.0"
   resolved "http://r.npm.sankuai.com/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
@@ -5837,6 +5869,11 @@ url-parse@^1.4.4:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-memo-one@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/use-memo-one/download/use-memo-one-1.1.1.tgz#39e6f08fe27e422a7d7b234b5f9056af313bd22c"
+  integrity sha1-Oebwj+J+Qip9eyNLX5BWrzE70iw=
 
 use@^3.1.0:
   version "3.1.1"
