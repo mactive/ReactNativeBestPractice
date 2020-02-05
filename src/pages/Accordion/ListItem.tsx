@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   }
 });
+
 export interface ListItem {
   name: string;
   points: string;
